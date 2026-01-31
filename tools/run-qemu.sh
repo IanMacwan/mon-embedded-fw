@@ -18,6 +18,6 @@ echo "🔧 converting elf -> raw binary..."
 arm-none-eabi-objcopy -O binary "${TARGET}.elf" "${TARGET}.bin"
 
 echo "🚀 starting qemu..."
-qemu-system-arm -M $QEMU_MACHINE -kernel "${TARGET}.bin" -S -gdb tcp::${GDB_PORT}
+qemu-system-arm -M $QEMU_MACHINE -serial stdio -kernel "${TARGET}.bin" -S -gdb tcp::${GDB_PORT}
 
 echo "✅ finished!"

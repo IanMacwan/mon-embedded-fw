@@ -1,6 +1,8 @@
-// Temp minimal main file
+#include "../inc/uart.h"
+
 int main(void) {
-  while (1) {
-    __asm__("nop");
-  }
+    uart_init();
+    uart_print("hello world!!\n");
+
+    while (1);
 }

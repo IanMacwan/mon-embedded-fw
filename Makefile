@@ -23,6 +23,8 @@ CFLAGS := \
 	-mcpu=cortex-m3 \
 	-mthumb \
 	-O0 -g \
+	-ffreestanding \
+	-fno-builtin \
 	-nostdlib \
 	-Wall -Wextra \
 	-I$(INC_DIR)
@@ -46,3 +48,4 @@ flash: $(TARGET).elf
 	@echo "Flash command goes here"
 
 .PHONY: all clean flash
+
