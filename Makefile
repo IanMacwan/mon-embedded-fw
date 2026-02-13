@@ -42,7 +42,7 @@ $(BUILD)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(BUILD) $(TARGET).elf $(TARGET).bin
+	rm -rf $(BUILD) $(TARGET).elf
 
 flash: $(TARGET).elf
 	@echo "Flash command goes here"
